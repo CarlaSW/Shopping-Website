@@ -1,15 +1,96 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="styles/Homepage.css">
-    <link rel="stylesheet" href="styles/cartPage.css">
-
-  </head>
-  <body>
+    <head>
+        <title>Your Cart</title>
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/cartPage.css">
 
 
+    </head>
+    <body>
+        <div class="header">
+            <div class="left-header">
+                <img src="images/fullcart.jpg" class="fullcart-icon">
+                <p class="logo"><span class="shop-name">CS</span> Shop your style </p>
+                
+            </div>
+            <div class="mid-header">
+                <input class="search-input" type="text" placeholder="Search">
+                <button class="search-button">
+                    <img class="search-icon" src="images/search-icon.png" alt="search-icon">
+                </button>
+            </div>
+            <div class="right-header">
+                <a class="cart-button" href="cartPage.html" title="Your Cart" target="_blank">
+                    <img class="cart-icon" src="images/cart.jpeg" alt="cart-icon">
+                    <p class="cart-quantity js-cart-quantity"> 0</p>
+                    <p class="cart-logo">Cart</p>
+                </a>
 
-    <script type="module" src="scripts/cart.js"></script>
-  </body>
+            </div>
+        </div>
+
+        <div class="cart-page">
+            <div class="cart-item-grid"> 
+                <p class="review-phrase">
+                    Review Your Order
+                </p>
+                <div class="item-grid">
+
+                    <p class="delivery-date-phrase">Delivery date: Friday, September 20</p>
+
+                    <div class="purchase-details-grid">
+                        <div class="product-image">
+                            <img class="product-cart-icon" src="images/top1.jpeg">
+                        </div>
+                        <div class="product-info">  
+                            <p class="product-name"> Black socks</p>
+                            <p class="product-price">$10.9</p>
+                            <p class="product-quantity">Quantity: </p>
+                        </div>
+                        <div class="delivery-details">
+                            <p class="delivery-phrase">Choose a delivery option:</p>
+                            <div class="options">
+                                <div class="delivery-options">
+                                    <input type="radio" name="delivery-date" class="delivery-radio">
+                                    <label>
+                                        <span class="date">Friday, September 20</span>
+                                        <span class="shipping-price">FREE Shipping</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-options">
+                                    <input type="radio" name="delivery-date" >
+                                    <label>
+                                        <span class="date"> Monday, September 16</span>
+                                        <span class="shipping-price">$4.99 - Shipping</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-options">
+                                    <input type="radio" name="delivery-date" >
+                                    <label>
+                                        <span class="date">Thursday, September 12</span>
+                                        <span class="shipping-price">$9.99 - Shipping
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            
+
+
+                                
+                        </div>
+                    </div>
+
+
+
+    
+                </div>
+            </div>
+            <div class="overall-cart-grid">
+    
+            </div>
+        </div>
+
+        <script src="scripts/cart.js" type="module"></script>
+    </body>
 </html>

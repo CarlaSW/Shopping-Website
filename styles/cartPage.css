@@ -1,0 +1,95 @@
+.cart-page{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+.cart-item-grid{
+    display: grid;
+    grid-template-rows:25px 1fr 1fr ;
+    overflow: scroll; 
+}
+.review-phrase{
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.item-grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 25px 1fr;
+    border: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+}
+.delivery-date-phrase{
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: inline;
+    color: rgb(112, 68, 68);
+
+}
+.purchase-details-grid{
+    display: grid;
+    grid-template-columns:130px 400px 1fr;
+}
+.product-cart-icon{
+    padding-top: 30px;
+    padding-left: 10px;
+    width: 110px;
+}
+.product-info{
+    padding-left: 20px;
+    padding-top: 15px;
+
+}
+.product-name{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+.product-price{
+    font-size: 20px;    
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+.product-quantity{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.delivery-details{
+    padding-top: 15px;
+
+}
+.delivery-phrase{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    margin-bottom: 15px;
+}
+.options{
+    margin-bottom: 15px;
+}
+.date{
+    font-size: 17px;
+
+}
+.shipping-price{
+    color: gray;
+    display: block;
+    font-size: 15px;
+    padding-left: 25px;
+
+}
+
+
+
+
+.overall-cart-grid{
+    background-color: blue;
+}
+

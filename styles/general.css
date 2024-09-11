@@ -1,0 +1,124 @@
+.header{
+    background-color: rgb(112, 68, 68);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: -8px;
+    display: flex;
+    flex-direction: row;
+    z-index: 5;
+}
+
+.left-header{
+    width:300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.fullcart-icon{
+    margin-left: -20px;
+    width:100px;
+    height: 70px;
+    margin-right: 10px;
+}
+.logo{
+    font-size: 20px;
+    color: white;
+    display: inline;
+}
+.shop-name{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    display: inline;
+}
+
+
+.mid-header{
+    flex:1;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-input{
+    width:700px;
+    height:50px;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.search-button{
+    height: 50px;
+    width:50px;
+    margin-left: -3px;
+    cursor: pointer;
+    border-radius: 3px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.search-button:hover{
+    opacity:0.7;
+}
+.search-button:active{
+    opacity: 0.3;
+}
+.search-icon{
+    height: 35px;
+    width: 35px;
+    padding-left: 2px;
+}
+.search-input::placeholder{
+    font-size: 20px;
+}
+
+
+
+.right-header{
+    width:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-button{
+    border-radius: 25px;
+    height: 50px;
+    width:200px;
+    cursor: pointer;
+    margin-right: 7px;
+    position: relative;
+    text-decoration: none;
+
+
+}
+.cart-button:hover{
+    opacity:0.7;
+}
+.cart-button:active{
+    opacity: 0.3;
+}
+.cart-icon{
+    border-radius: 25px;
+    height: 45px;
+    margin-left: -5px;
+}
+.cart-quantity{
+    background-color: red;
+    color: white;
+    opacity: 1;
+    position: absolute;
+    font-size: 20px;
+    width:15px;
+    border-radius: 50px;
+    top:-25;
+    left:30;
+    padding-left: 5px;
+}
+.cart-logo{
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    display: inline;
+    width:100px;
+}
