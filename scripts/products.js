@@ -1,5 +1,5 @@
-let products=[{
-    id:1,
+export let products=[{
+    id:'1',
     name:"Short Green Dress With a Slit",
     image:"images/dress1.jpeg",
     rating:{
@@ -9,7 +9,7 @@ let products=[{
     price:1000
 },
 {
-    id:2,
+    id:'2',
     name:"Flowers Dress",
     image:"images/dress2.webp",
     rating:{
@@ -19,7 +19,7 @@ let products=[{
     price:2500
 },
 {
-    id:3,
+    id:'3',
     name:"Blue Dress",
     image:"images/dress3.jpeg",
     rating:{
@@ -29,7 +29,7 @@ let products=[{
     price:1175
 },
 {
-    id:4,
+    id:'4',
     name:"Green and Blue Satin Skirt",
     image:"images/skirt1.jpeg",
     rating:{
@@ -39,7 +39,7 @@ let products=[{
     price:1000
 },
 {
-    id:5,
+    id:'5',
     name:"Black Tennis Skirt",
     image:"images/skirt2.webp",
     rating:{
@@ -49,7 +49,7 @@ let products=[{
     price:950
 },
 {
-    id:6,
+    id:'6',
     name:"White Tennis Skirt",
     image:"images/skirt3.jpeg",
     rating:{
@@ -59,7 +59,7 @@ let products=[{
     price:930
 },
 {
-    id:7,
+    id:'7',
     name:"Black Crop Top",
     image:"images/top1.jpeg",
     rating:{
@@ -69,7 +69,7 @@ let products=[{
     price:750
 },
 {
-    id:8,
+    id:'8',
     name:"Black Rubbon Crop Top",
     image:"images/top2.jpeg",
     rating:{
@@ -79,7 +79,7 @@ let products=[{
     price:690
 },
 {
-    id:9,
+    id:'9',
     name:"Baby Blue Off Shoulders Croped Blouse",
     image:"images/top3.webp",
     rating:{
@@ -88,4 +88,4 @@ let products=[{
     },
     price:1200
 }
-]
+];

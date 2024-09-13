@@ -5,8 +5,7 @@
 }
 .cart-item-grid{
     display: grid;
-    grid-template-rows:25px 1fr 1fr ;
-    overflow: scroll; 
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
 }
 .review-phrase{
     margin-top: 5px;
@@ -62,6 +61,7 @@
 }
 .delivery-details{
     padding-top: 15px;
+    padding-left: 30px;
 
 }
 .delivery-phrase{
@@ -85,8 +85,12 @@
     padding-left: 25px;
 
 }
-
-
+.update-link,.delete-link{
+    color: gray;
+    font-size: 17px;
+    font-weight: normal;
+    cursor: pointer;
+}
 
 
 .overall-cart-grid{
