@@ -94,6 +94,54 @@
 
 
 .overall-cart-grid{
-    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    border-color: gainsboro;
+    border-style: solid;
+    height:300px;
+    margin-top: 90px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-top: 15px;
 }
 
+.payment-summary-title{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.payment-summary-row,.payment-summary-money{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.total-row{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px;
+    border-color: black;
+    border-style:solid;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    padding-top: 7px;
+}
+.place-order-button{
+    height: 40px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(112, 68, 68);
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    color: white;
+    margin-left: 20px;
+    border-radius: 2px;
+    margin-top: 15px;
+    cursor: pointer;
+}

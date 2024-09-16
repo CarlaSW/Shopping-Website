@@ -2,6 +2,7 @@ import {cart,updateCart,updateDeliveryDate} from '../scripts/cart.js';
 import { products } from '../scripts/products.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions } from './deliveryOptions.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 let cartHtml=``;
 
@@ -64,6 +65,7 @@ deleteLinks.forEach((link)=>{
         updateCart(IDtoDeleteProduct);
         let productRemoved=document.querySelector(`.js-item-grid-${IDtoDeleteProduct}`).remove();
         console.log(cart);
+        renderPaymentSummary();
 
     })
 
@@ -78,6 +80,7 @@ deliveryOptionsButtons.forEach((button)=>{
         updateDeliveryDate(productId,optionId);
         generateCartPageHtml();
         console.log(cart);
+        renderPaymentSummary();
 
     })
 

@@ -1,5 +1,6 @@
 import {cart,addToCart} from'../scripts/cart.js';
 import { products } from '../scripts/products.js';
+import { renderSearchPage} from './searchPage.js';
 
 let productsHtml=``;
 products.forEach((product,index)=>{
@@ -33,5 +34,4 @@ products.forEach((product,index)=>{
 })
 let showProducts=document.querySelector(".js-products");
 showProducts.innerHTML=productsHtml;
-console.log(productsHtml);
 addToCart();
