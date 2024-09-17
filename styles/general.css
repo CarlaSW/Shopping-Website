@@ -110,11 +110,11 @@
     opacity: 1;
     position: absolute;
     font-size: 20px;
-    width:15px;
+    width:30px;
     border-radius: 50px;
     top:-25;
     left:30;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 .cart-logo{
     font-weight: bold;

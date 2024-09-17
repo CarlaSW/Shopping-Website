@@ -85,13 +85,19 @@
     padding-left: 25px;
 
 }
-.update-link,.delete-link{
+.update-link,.delete-link,.save-link{
     color: gray;
     font-size: 17px;
     font-weight: normal;
     cursor: pointer;
 }
-
+.quantity-selector{
+    height: 25px;
+    width: 60px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: -15px;
+}
 
 .overall-cart-grid{
     justify-content: center;

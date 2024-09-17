@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 .product-price,.rating-count{
-    margin-top: px;
+    margin-top: 0px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -39,13 +39,20 @@
 .rating-stars-icon{
     height: 20px;
 }
+.quantity-selector{
+    height: 25px;
+    width: 60px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: -15px;
+}
 .add-to-cart{
     position: relative;
 }
 .add-to-cart-button{
     width: 250px;
-    margin-top: -10px;
-    height: 50px;
+    margin-top: -5px;
+    height: 45px;
     background-color: rgb(112, 68, 68);
     color: white;
     font-size: 20px;

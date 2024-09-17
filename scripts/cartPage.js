@@ -1,4 +1,4 @@
-import {cart,updateCart,updateDeliveryDate} from '../scripts/cart.js';
+import {cart,updateCart,updateDeliveryDate,saveToStorage,calculateQuantity} from '../scripts/cart.js';
 import { products } from '../scripts/products.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions } from './deliveryOptions.js';
@@ -41,7 +41,7 @@ function generateCartPageHtml()
                     <div class="product-info">  
                         <p class="product-name">${matchingProduct.name}</p>
                         <p class="product-price">$${matchingProduct.price/100}</p>
-                        <p class="product-quantity">Quantity: ${cartItem.quantity} <span class="update-link js-update-link">Update</span> <span class="delete-link js-delete-link" data-delete-link=${matchingProduct.id} >Delete</span></p>
+                        <p class="product-quantity js-product-quantity-${matchingProduct.id}">Quantity: ${cartItem.quantity} <span class="update-link js-update-link" data-update-link=${matchingProduct.id}>Update</span> <span class="delete-link js-delete-link" data-delete-link=${matchingProduct.id} >Delete</span></p>
                     </div>
                     <div class="delivery-details">
                         <p class="delivery-phrase">Choose a delivery option:</p>
@@ -65,13 +65,61 @@ deleteLinks.forEach((link)=>{
         updateCart(IDtoDeleteProduct);
         let productRemoved=document.querySelector(`.js-item-grid-${IDtoDeleteProduct}`).remove();
         console.log(cart);
+        generateCartPageHtml();
         renderPaymentSummary();
 
     })
 
 })
 
+//Update quantity of cart items
+let updateLinks = document.querySelectorAll('.js-update-link');
+updateLinks.forEach((link)=>{
+    link.addEventListener('click',()=>{
+        let IDtoUpdateProduct=link.dataset.updateLink;
+        document.querySelector(`.js-product-quantity-${IDtoUpdateProduct}`).innerHTML=`
+            Quantity: 
+            <select class="quantity-selector js-quantity-selector" name="quantity" id="quantity-update-${IDtoUpdateProduct}" data-quantity-of-product=${IDtoUpdateProduct}>
+                        <option value="1" >1</option>
+                        <option value="2" >2</option>
+                        <option value="3" >3</option>
+                        <option value="4" >4</option>
+                        <option value="5" >5</option>
+                        <option value="6" >6</option>
+                        <option value="7" >7</option>
+                        <option value="8" >8</option>
+                        <option value="9" >9</option>
+                        <option value="10">10</option>
 
+            </select>
+            <span class="save-link js-save-link" data-save-link=${IDtoUpdateProduct}>Save</span> <span class="delete-link js-delete-link" data-delete-link=${IDtoUpdateProduct} >Delete</span>
+        `;
+        let saveLinks=document.querySelectorAll('.js-save-link');
+        saveLinks.forEach((saveLink)=>{
+            saveLink.addEventListener('click',()=>{
+                let quantityOfProduct=Number(document.getElementById(`quantity-update-${IDtoUpdateProduct}`).value);
+
+                cart.forEach((cartItem)=>{
+                    if(cartItem.productId===IDtoUpdateProduct)
+                    {
+                        cartItem.quantity=quantityOfProduct;
+                        saveToStorage();
+                        document.querySelector(`.js-product-quantity-${IDtoUpdateProduct}`).innerHTML=`
+                        Quantity: ${cartItem.quantity} <span class="update-link js-update-link" data-update-link=${IDtoUpdateProduct}>Update</span> <span class="delete-link js-delete-link" data-delete-link=${IDtoUpdateProduct} >Delete</span>
+                    `;
+                    renderPaymentSummary();
+                    calculateQuantity();
+                    generateCartPageHtml();
+
+                    }
+                    
+                })
+            })
+        })
+        })
+
+
+})
 
 
 //update when delivery option changes
@@ -123,4 +171,6 @@ function generateDeliveryOptions(matchingProduct,cartItem){
     })    
     return deliveryOptionsHtml;
 }
+
+
 
