@@ -151,3 +151,15 @@
     margin-top: 15px;
     cursor: pointer;
 }
+.empty-cart-page-icon{
+    width:450px;
+    margin-top: 50px;
+    justify-self: center;
+}
+.cart-empty-phrase{
+    font-weight: bold;
+    font-size: 30px;
+    justify-self: center;
+    color: rgb(227, 123, 20);
+    margin-top: -10px;
+}

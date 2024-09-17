@@ -12,6 +12,8 @@ generateCartPageHtml();
 //generate html for cart page
 function generateCartPageHtml()
 {
+    if(cart.length!==0)
+    {
     cartHtml=``;
     cart.forEach((cartItem)=>{
         let id=cartItem.productId;
@@ -136,7 +138,15 @@ deliveryOptionsButtons.forEach((button)=>{
     })
 
 }) 
+}
+else if(cart.length===0)
+{
+    document.querySelector('.js-cart-item-grid').innerHTML=`
+            <img src="images/emptyCart2.png" class="empty-cart-page-icon">
+            <p class="cart-empty-phrase">Your Cart is Empty !!</p>
+    `;
 
+}
 }
 
 

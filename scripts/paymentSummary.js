@@ -57,7 +57,7 @@ export function renderPaymentSummary(){
         </div>
 
         <div class="payment-summary-row">
-        <div>Estimated tax (10%):</div>$${tax.toFixed(2)}555</div>
+        <div>Estimated tax (10%):</div>$${tax.toFixed(2)}</div>
         </div>
 
         <div class="payment-summary-row total-row">
