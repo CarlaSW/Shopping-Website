@@ -57,7 +57,7 @@ function generateCartPageHtml()
 
 
 
-    //Delete link for each cart item
+//Delete link for each cart item
 let deleteLinks=document.querySelectorAll('.js-delete-link');
 deleteLinks.forEach((link)=>{
     link.addEventListener('click',()=>{
@@ -70,6 +70,9 @@ deleteLinks.forEach((link)=>{
     })
 
 })
+
+
+
 
 //update when delivery option changes
 let deliveryOptionsButtons = document.querySelectorAll('.js-delivery-option');
